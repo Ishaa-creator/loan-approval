@@ -1,4 +1,4 @@
-##Loan Approval and Bank Profitability Analysis Using Bayes' Theorem
+### Loan Approval and Bank Profitability Analysis Using Bayes' Theorem
 
 In this project, we built a model to evaluate loan approval decisions and calculate potential gain and loss for a bank based on user input and pre-existing loan data. The project is structured around a few key components:
 
