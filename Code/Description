@@ -1,1 +1,21 @@
-a
+This code is a loan approval simulation that evaluates multiple loan applications based on financial criteria. It calculates the Equated Monthly Installment (EMI) for a given loan amount, determines the Fixed Obligations to Income Ratio (FOIR), and decides whether a loan should be approved or rejected based on predefined thresholds for FOIR and CIBIL score.  
+
+### **How It Works:**  
+1. **Data Loading & Probability Calculation:**  
+   - Reads historical loan data (`loan_data.csv`) to determine prior probabilities of loan approval and rejection.  
+   - Computes probability distributions for high CIBIL scores and self-employment status.  
+
+2. **Loan Processing Logic:**  
+   - For each loan application, the user provides inputs like income, loan amount, interest rate, and employment details.  
+   - The EMI is calculated using the loan amount, interest rate, and tenure.  
+   - FOIR is computed to assess whether the applicant can afford the loan.  
+   - If the applicant’s FOIR is below a threshold (0.5) and their CIBIL score is above the minimum required (600), the loan is approved; otherwise, it's rejected.  
+
+3. **Financial Impact Estimation:**  
+   - If approved, the total expected earnings from EMI payments (interest + principal) are added to potential gains.  
+   - If rejected, the loan amount is treated as a potential loss.  
+   - A default risk of 20% is applied to approved loans to estimate realistic losses.  
+
+4. **Results Output:**  
+   - Individual loan decisions and EMI calculations are displayed.  
+   - Consolidated results, including total approved loan amounts, expected gains, and potential losses, are computed and saved to a file for later analysis.  
