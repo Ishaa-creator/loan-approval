@@ -1,1 +1,14 @@
+### **Dataset Description: Loan Approval Dataset**  
 
+The dataset contains historical loan application records, helping in assessing loan approval probabilities. It includes key financial parameters used for decision-making.  
+
+#### **Main Features:**  
+- **loan_status** → Indicates whether a loan was **Approved** or **Rejected**.  
+- **cibil_score** → A numerical score (typically 300-900) representing the applicant’s creditworthiness.  
+- **self_employed** → Specifies whether the applicant is **Self-Employed ("Yes")** or **Salaried ("No")**.  
+- **monthly_income** → The applicant’s monthly earnings.  
+- **loan_amount** → The amount requested by the applicant.  
+- **interest_rate** → Annual interest rate applied to the loan.  
+- **loan_term** → Duration of the loan (in years).  
+
+This dataset is used to calculate probabilities and make data-driven loan approval decisions based on financial criteria.
