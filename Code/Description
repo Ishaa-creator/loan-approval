@@ -1,12 +1,23 @@
-Dataset Description: Loan Approval Dataset
-The dataset contains historical loan application records, helping in assessing loan approval probabilities. It includes key financial parameters used for decision-making.
+This code is a loan approval simulation that evaluates multiple loan applications based on financial criteria. It calculates the Equated Monthly Installment (EMI) for a given loan amount, determines the Fixed Obligations to Income Ratio (FOIR), and decides whether a loan should be approved or rejected based on predefined thresholds for FOIR and CIBIL score.
 
-Main Features:
-loan_status → Indicates whether a loan was Approved or Rejected.
-cibil_score → A numerical score (typically 300-900) representing the applicant’s creditworthiness.
-self_employed → Specifies whether the applicant is Self-Employed ("Yes") or Salaried ("No").
-monthly_income → The applicant’s monthly earnings.
-loan_amount → The amount requested by the applicant.
-interest_rate → Annual interest rate applied to the loan.
-loan_term → Duration of the loan (in years).
-This dataset is used to calculate probabilities and make data-driven loan approval decisions based on financial criteria.
+How It Works:
+Data Loading & Probability Calculation:
+
+Reads historical loan data (loan_data.csv) to determine prior probabilities of loan approval and rejection.
+Computes probability distributions for high CIBIL scores and self-employment status.
+Loan Processing Logic:
+
+For each loan application, the user provides inputs like income, loan amount, interest rate, and employment details.
+The EMI is calculated using the loan amount, interest rate, and tenure.
+FOIR is computed to assess whether the applicant can afford the loan.
+If the applicant’s FOIR is below a threshold (0.5) and their CIBIL score is above the minimum required (600), the loan is approved; otherwise, it's rejected.
+Financial Impact Estimation:
+
+If approved, the total expected earnings from EMI payments (interest + principal) are added to potential gains.
+If rejected, the loan amount is treated as a potential loss.
+A default risk of 20% is applied to approved loans to estimate realistic losses.
+Results Output:
+
+Individual loan decisions and EMI calculations are displayed.
+Consolidated results, including total approved loan amounts, expected gains, and potential losses, are computed and saved to a file for later analysis.
+This code effectively models a bank’s decision-making process when evaluating loan applications while considering financial risks.
